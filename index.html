@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Calculadora Empresarial</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://d33wubrfki0l68.cloudfront.net/bundles/7ba13479005e0ed6e377369508482d72b195701a.css">
+      
+      <style>
+      input[type], select, textarea {
+		    -webkit-appearance: none;
+		    background: #fff;
+		    padding: .8125em;
+		    border-radius: 0px !important;
+		    border: none;
+		}
+      
+      </style>
+      
+   </head>
+	<section class="features features-9 simule">
+	   <div class="container">
+	      <div class="row">
+	         <div class="col-sm-12 text-center" style="margin-bottom:30px">
+	            <h3>Bem vindo a calculadora empresarial 1.0 </h3>
+	            <p class="lead">
+	               Começe escolhendo o seu modelo de contrato.
+	            </p>
+	         </div>
+	      </div>
+	      <div class="row">
+	      
+	         <div class="calculadora col-lg-4 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-5">
+<!-- 	            <div class="col-md-12 col-xs-12 btn-group" data-toggle="buttons"> -->
+<!-- 	               <label class="col-md-6 col-xs-6 btn btn-primary active" id="tab-sn" ng-click="simples = true"> -->
+<!-- 	                  <a aria-controls="home" role="tab" data-toggle="tab"> -->
+<!-- 	                     <input type="radio" name="options" id="option1" autocomplete="off" checked=""> -->
+<!-- 	                     <h4>Simples Nacional</h4> -->
+<!-- 	                  </a> -->
+<!-- 	               </label> -->
+<!-- 	               <label class="col-md-6 col-xs-6 btn btn-primary" id="tab-lp" ng-click="simples = false"> -->
+<!-- 	                  <a aria-controls="home" role="tab" data-toggle="tab"> -->
+<!-- 	                     <input type="radio" name="options" id="option2" autocomplete="off"> -->
+<!-- 	                     <h4>Lucro Presumido</h4> -->
+<!-- 	                  </a> -->
+<!-- 	               </label> -->
+<!-- 	            </div> -->
+
+       			<div class="input-group col-sm-12">
+	               <div class="dropdownz" >
+	                  <button class="btn btn-default dropdown-toggle ng-binding" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:100%;text-align:center;font-size:1.2em;line-height:2.5em;font-weight:700">
+	                   <span id="escolhaModeloContrato"> Escolha seu modelo de contrato </span>&nbsp;&nbsp;
+	                  <span class="caret"></span>
+	                  </button>
+	                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="width:100%;text-align:center;font-size:1em;font-weight:700" id="modeloContratoList">
+	                  </ul>
+	                  <br class="visible-sm"><br class="visible-sm">
+	               </div>
+	               <br class="visible-lg visible-md">
+	               <br>
+	            </div>
+	            
+	            <br class="visible-xs">
+	            	<input id="contratoModeloID" class="hidden">
+	            	<form id="parametroContratoLista">
+	            		
+		          	</form>
+		       </div>
+		       
+		         <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
+		         <br class="visible-xs">
+	         <!------>
+	         <div class="calculadoraSimule col-lg-4 col-md-5 col-sm-5 col-xs-12 text-center" data-wow-delay="0.2s">
+	            <div class="card cardBranco wow fadeInLeft" data-wow-delay="0.2s" style="margin-bottom:15px">
+	               <i class="material-icons img-responsive pull-left imgSombra2" style="font-size:1.5em;color:#0EDC16;margin-bottom:10px">attach_money</i>
+	               <span style="font-weight:300" class="opacidade">Você irá <b>pagar</b>:</span>
+	               <br><br>
+	               <span class="cifrao">R$ <span class="valor economia ng-binding" id="valorAPagar">0,00</span> / ano</span>
+	            </div>
+	            <br>
+	            <div class="card cardBranco wow fadeInLeft" data-wow-delay="0.4s">
+	               <i class="material-icons img-responsive pull-left imgSombra2" style="font-size:1.5em;color:#2196F3">thumb_up</i>
+	               <span style="font-weight:300;line-height:1.2em" class="opacidade">Sua <b>mensalidade</b> será:</span>
+	               <br>
+	               <span class="cifrao">R$ </span> <span class="valor mensalidade ng-binding">0,00</span> / mês
+	            </div>
+	            <div class="wow fadeInLeft animated text-center" style="margin:20px 0" data-wow-delay="0.6s">
+	               <h3 class="text-center" style="margin-bottom:20px;font-weight:300;opacity:1;color:#fff;font-size:18px">Penatibus et magnis</h3>
+	            </div>
+	            <span class="opacidade" style="color:#fff;font-size:14px">penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim<a> Consequat</a>.
+	            </span>
+	            <br><br>
+	            <br>
+	            <a class="btn btn--primary inner-link" href="#" target="_self" onclick="validar()">
+	            <span class="btn__text">
+	             Contratar/Aderir</span>
+	            </a>
+	         </div>
+	         
+	         
+	      </div>
+	   </div>
+	</section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js"></script>
+	<script>
+	
+// 		var address = "http://adi.adaptaconsultoria.com.br/up/adesao/ws/doAdesao";
+		var address = "http://192.168.0.33:8079/up/adesao/ws/doAdesao";
+		var empresaId = "0";
+		
+		jQuery.extend(jQuery.validator.messages, {
+		    required: "Este campo &eacute; requerido.",
+		    remote: "Por favor, corrija este campo.",
+		    email: "Por favor, forne&ccedil;a um endere&ccedil;o eletr&ocirc;nico v&aacute;lido.",
+		    url: "Por favor, forne&ccedil;a uma URL v&aacute;lida.",
+		    date: "Por favor, forne&ccedil;a uma data v&aacute;lida.",
+		    dateISO: "Por favor, forne&ccedil;a uma data v&aacute;lida (ISO).",
+		    number: "Por favor, forne&ccedil;a um n&uacute;mero v&aacute;lido.",
+		    digits: "Por favor, forne&ccedil;a somente d&iacute;gitos.",
+		    creditcard: "Por favor, forne&ccedil;a um cart&atilde;o de cr&eacute;dito v&aacute;lido.",
+		    equalTo: "Por favor, forne&ccedil;a o mesmo valor novamente.",
+		    accept: "Por favor, forne&ccedil;a um valor com uma extens&atilde;o v&aacute;lida.",
+		    maxlength: jQuery.validator.format("Por favor, forne&ccedil;a n&atilde;o mais que {0} caracteres."),
+		    minlength: jQuery.validator.format("Por favor, forne&ccedil;a ao menos {0} caracteres."),
+		    rangelength: jQuery.validator.format("Por favor, forne&ccedil;a um valor entre {0} e {1} caracteres de comprimento."),
+		    range: jQuery.validator.format("Por favor, forne&ccedil;a um valor entre {0} e {1}."),
+		    max: jQuery.validator.format("Por favor, forne&ccedil;a um valor menor ou igual a {0}."),
+		    min: jQuery.validator.format("Por favor, forne&ccedil;a um valor maior ou igual a {0}.")
+		});
+    
+		$.validator.setDefaults({
+		    errorClass: 'text-danger',
+		    highlight: function(element) {
+		      $(element)
+		        .closest('.form-group')
+		        .addClass('text-danger');
+		    },
+		    unhighlight: function(element) {
+		      $(element)
+		        .closest('.form-group')
+		        .removeClass('text-danger');
+		    },
+		    errorPlacement: function (error, element) {
+		      if (element.prop('type') === 'checkbox') {
+		        error.insertAfter(element.parent());
+		      } else {
+		        error.insertAfter(element);
+		      }
+		    }
+		});
+		
+		$(document).ready(function ()
+		{
+		    $.ajax({
+		        url: address,
+		        type: "POST",
+		        data: {"empresaID": empresaId, "metodo": "getModelosContrato"},
+		        success: function (modeloContratoList)
+		        {
+		                html = "";
+		                modeloContratoListArray = modeloContratoList.modeloContratoList;
+		                for (x in modeloContratoListArray)
+		                {
+		                	 html += "<li><a onclick=\"escolhaModeloContrato('"+modeloContratoListArray[x].nome+"','"+modeloContratoListArray[x].contratoModeloID+"')\" id=\""+ modeloContratoListArray[x].contratoModeloID + "\"> " +modeloContratoListArray[x].nome+" </a></li>";
+		                }
+		                $('#modeloContratoList').html(html);
+		        }})
+		          
+		})
+        
+//         	 $.ajax({
+// 	         url: "http://adi.adaptaconsultoria.com.br/up/adesao/ws/doAdesao",
+// 	         data: {
+// 		        	 	"empresaID": "0", 
+// 		        	 	"contratoModeloID": $('#contratoModeloID').val(), 
+// 		        	 	"metodo": "getParametrosContrato",
+// 		        	 	"parametroList": 
+// 		        	 	{
+// 		        	 		{id : 1, valor : 10}, {id : 3, valor : 5}, {id : 4, valor : 2}". 
+// 		        	 	}
+// 	          },
+// 	         success: function (getParametrosContrato)
+// 	         {
+// 	             console.log(getParametrosContrato)
+// 	         }})
+        
+        var parametroContrato = [];
+		function escolhaModeloContrato(modeloDeContrato, contratoModeloID)
+        {
+        	var parametroContratoListArray;
+    		$("#contratoModeloID").val(contratoModeloID);
+	    		
+		    $.ajax({
+         	url: address,
+         	type: "POST",
+			data: {"empresaID": empresaId, "contratoModeloID": $('#contratoModeloID').val(), "metodo": "getParametrosContrato"},
+	          success: function (getParametrosContrato)
+	          {
+				parametroContratoListArray = getParametrosContrato.parametroContratoList;
+				console.log(parametroContratoListArray);
+	       		$('#escolhaModeloContrato').html(modeloDeContrato);
+	       		
+	       		// get the array from server and pass the values to this global varible
+	       		parametroContrato = parametroContratoListArray;
+	       	
+	            var html = "";
+	
+	        	for (x in parametroContratoListArray)
+	       		{
+	        		if (parametroContratoListArray[x].tipo == "L")
+	    			{
+	 	               	html += "<div class=\"input-group col-sm-12\"> " + 
+				            " 	<div class=\"dropdownz\" > "+
+				            "     <button class=\"btn btn-default dropdown-toggle\" type=\"button\" " +  
+				            "		id=\"dropdownMenu1\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\" " + 
+				           	"		style=\"width:100%;text-align:center;font-size:1.2em;line-height:2.5em;font-weight:700\"> " + 
+				            "  		<span id=\""+parametroContratoListArray[x].parametroID+"\"> " +parametroContratoListArray[x].nome+ " </span>&nbsp;&nbsp; " + 
+				            "        <input class=\"hidden\" required id=\"parametroContratoList"+parametroContratoListArray[x].parametroID+"\"> "+ 
+				            "     	<span class=\"caret\"></span>  </button> " +
+				            "    <ul class=\"dropdown-menu\" aria-labelledby=\"dropdownMenu1\" style=\"width:100%;text-align:center;font-size:1em;font-weight:700\"> ";
+	 	               	
+	 	               		for (y in parametroContratoListArray[x].valorPossivelList)
+	               			{
+								html += "<li><a onclick=\"setNomeParametroContrato('"+parametroContratoListArray[x].valorPossivelList[y].nome+"','"+parametroContratoListArray[x].parametroID+"','"+parametroContratoListArray[x].valorPossivelList[y].valor+"')\"  \"> " +parametroContratoListArray[x].valorPossivelList[y].nome+ " </a></li>";
+		               		}
+	 	               		
+	 	               		html += "</ul> <br class=\"visible-sm\"><br class=\"visible-sm\">" +
+			                  		"</div> <br class=\"visible-lg visible-md\"> <br> </div>";
+	     			}	
+	
+	        		if (parametroContratoListArray[x].tipo == "I")
+	       			{
+		        		   html += "<p class=\"text-center\" style=\"padding-top:0px;margin-top:20px\"> "+ parametroContratoListArray[x].nome +" </p>"+ 
+		    	                   "<div class=\"input-group text-center\"> "+
+		   	                       "<input type=\"number\" onkeyup=\"updateValue()\"  id=\"parametroContratoList"+parametroContratoListArray[x].parametroID+"\""+
+		   	                       "class=\"form-control\" value=\"0\" "+
+		   	                       "style=\"height:60px;text-align:center;font-size:1.5em;margin:0 auto;font-weight:700\"";
+	   	                       
+		  	               if (parametroContratoListArray[x].obrigatorio)
+		               	   {
+			                	 html += "required";
+		                   }
+		    	                   
+		   	               html += "></div><br>";
+	       			}
+	        		
+	        		
+	        		
+	        		if (parametroContratoListArray[x].tipo == "N")
+	       			{
+		        		   html += "<p class=\"text-center\" style=\"padding-top:0px;margin-top:20px\"> "+ parametroContratoListArray[x].nome +" </p>"+ 
+		    	                   "<div class=\"input-group text-center\"> "+
+		   	                       "<input type=\"text\" onkeyup=\"updateValue()\" class=\"floatzao\" id=\"parametroContratoList"+parametroContratoListArray[x].parametroID+"\""+
+		   	                       "class=\"form-control\" "+
+		   	                       "style=\"height:60px;text-align:center;font-size:1.5em;margin:0 auto;font-weight:700\"";
+	   	                       
+		  	               if (parametroContratoListArray[x].obrigatorio)
+		               	   {
+			                	 html += "required";
+		                   }
+		    	                   
+		   	               html += "></div><br>";
+	       			}
+	        		
+	        		
+	        		if (parametroContratoListArray[x].tipo == "T")
+	       			{
+	        		    html += "<p class=\"text-center\" style=\"padding-top:0px;margin-top:20px\"> "+ parametroContratoListArray[x].nome +" </p>"+ 
+		                   "<div class=\"input-group text-center\"> "+
+	                       "<input type=\"text\" onchange=\"updateValue()\" class='date11 form-control' id=\"parametroContratoList"+parametroContratoListArray[x].parametroID+"\"   "+
+	                       "class=\"form-control\""+
+	                       "style=\" height:60px;text-align:center;font-size:1.2em;margin:0 auto;font-weight:700 \"";
+	                       
+	                       
+	        		    if (parametroContratoListArray[x].obrigatorio)
+		               	   {
+			                	 html += "required";
+		                   }
+		    	                   
+		   	               html += "></div><br> ";
+	       			}
+	        		
+	        		if (parametroContratoListArray[x].tipo == "S")
+	        		{
+	        			 html += "<p class=\"text-center\" style=\"padding-top:0px;margin-top:20px\"> "+ parametroContratoListArray[x].nome +" </p>"+ 
+		                 		 "<div class=\"input-group text-center\"> "+
+	                             "<input type=\"text\" min=\"1\" onkeyup=\"updateValue()\" id=\"parametroContratoList"+parametroContratoListArray[x].parametroID+"\"   "+
+	                             "class=\"form-control\" "+
+	                             "style=\"height:60px;text-align:center;font-size:1.5em;margin:0 auto;font-weight:700\"";
+	                     
+	                     
+	         		    if (parametroContratoListArray[x].obrigatorio)
+	 	               	   {
+	 		                	 html += "required";
+	 	                   }
+	 	    	                   
+	 	   	               html += "></div><br>";
+	        		}
+	        		
+	        		if (parametroContratoListArray[x].tipo == "B")
+	        		{
+	        			 html += "<p class=\"text-center\" style=\"padding-top:0px;margin-top:20px\"> "+ parametroContratoListArray[x].nome +" </p>"+ 
+				               "<div class=\"input-group text-center\"> "+
+			                   "<input type=\"text\" min=\"1\" onkeyup=\"updateValue()\" id=\"parametroContratoList"+parametroContratoListArray[x].parametroID+"\""+
+			                   "class=\"form-control\" value=\"0\" "+
+			                   "style=\"height:60px;text-align:center;font-size:1.5em;margin:0 auto;font-weight:700\"";
+	                     
+	                     
+	         		   if (parametroContratoListArray[x].obrigatorio)
+	               	   {
+		                	 html += "required";
+	                   }
+	 	    	                   
+	 	   	               html += "></div><br>";
+	        		}
+	       		}
+	        		$('#parametroContratoLista').html(html);
+	        		$('.date11').mask('00/00/0000');
+	        		
+	        		$('.floatzao').mask('#.##0,00', {reverse: true});
+				}})
+        }
+   
+    	function setNomeParametroContrato (nome, id, valor)
+    	{
+    		$("#"+id+"").html(nome);
+    		$("#parametroContratoList"+id+"").val(valor);
+    		updateValue();
+    	}
+    	
+    	//mounting and updating the json value
+    	function updateValue()
+    	{
+    		var parametroList = [];
+    		for (x in parametroContrato)
+       		{
+    			console.log( $("#parametroContratoList"+parametroContrato[x].parametroID+"").val() );
+    			parametroList.push({"id" : parametroContrato[x].parametroID, "valor":  parametroContrato[x].tipo == "N" ? parseFloat(($("#parametroContratoList"+parametroContrato[x].parametroID+"").val()).replace(/\./g, '').replace(',', '.')) : $("#parametroContratoList"+parametroContrato[x].parametroID+"").val()});
+       		}
+       		
+	        $.ajax({
+    		         url: address,
+    		         type: "POST",
+    		         data: {
+    		        	 		"empresaID": empresaId, "contratoModeloID": $('#contratoModeloID').val(), 
+    		        	   		"metodo": "getValor", 
+    		        	    	"parametroList": JSON.stringify(parametroList)
+    		        	   },
+    		         success: function (valor)
+    		         {
+    		        	 console.log(valor)
+    		             $("#valorAPagar").html(numberToReal(valor.valor))
+    		         }})
+    	    	
+       		console.log(parametroList)
+    	}
+    	
+    	// number to real "brl" brazilian currency
+    	function numberToReal(numero) 
+    	{
+    		if (numero != null && numero !== "" && numero != undefined)
+    		{
+    			var numero = numero.toFixed(2).split('.');
+    			numero[0] = "" + numero[0].split(/(?=(?:...)*$)/).join('.');
+    			numero = numero.join(',');
+    		    
+    		    numero = numero.replace("-.", "-");
+    		    
+    		    return numero;
+    		}
+    		else return null;
+    	}
+    	
+    	function validar()
+    	{
+    		
+    		$("#parametroContratoLista").validate({
+    		    ignore: "input[type='number']:hidden",
+    		});
+    		
+    		var parametroContratoListArray = parametroContratoList.parametroContratoList;
+    		var parametroList = [];
+    		
+    		for (x in parametroContratoListArray)
+       		{
+    			console.log( $("#parametroContratoList"+parametroContratoListArray[x].parametroID+"").val() );
+    			parametroList.push({"id" : parametroContratoListArray[x].parametroID, "valor": $("#parametroContratoList"+parametroContratoListArray[x].parametroID+"").val()});
+       		}
+    		
+    		if($("#parametroContratoLista").valid())
+   			{
+    		     $.ajax({
+    		         url: address,
+    		         type: "POST",
+    		         data: {
+    		        	 		"empresaID": empresaId, "contratoModeloID": $('#contratoModeloID').val(), 
+    		        	   		"metodo": "postContratar", 
+    		        	    	"parametroList": JSON.stringify(parametroList)
+    		        	   },
+    		         success: function (adesao)
+    		         {
+    		        	 adesao = 1;
+    		             window.location.href = "http://adi.adaptaconsultoria.com.br/up/adesao/Adesao.xhtml?adesao="+adesao+"";
+    		         }})
+   			}
+    	}
+    </script>
+  </body>
+</html>
